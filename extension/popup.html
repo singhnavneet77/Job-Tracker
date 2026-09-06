@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <span class="dot"></span>
+    <span class="name">JobBoard Pro</span>
+    <span class="status" id="status">checking…</span>
+  </div>
+
+  <!-- LOGIN VIEW -->
+  <div class="body" id="loginView" style="display:none;">
+    <div class="hint">Sign in with your JobBoard Pro account to enable autofill and job capture.</div>
+    <div class="msg" id="loginMsg"></div>
+    <div class="field"><label>Server URL</label><input id="serverUrl" placeholder="http://127.0.0.1:8000" /></div>
+    <div class="field"><label>Email</label><input id="email" type="email" /></div>
+    <div class="field"><label>Password</label><input id="password" type="password" /></div>
+    <button class="btn" id="loginBtn">Sign in</button>
+  </div>
+
+  <!-- MAIN VIEW -->
+  <div class="body" id="mainView" style="display:none;">
+    <div class="msg" id="mainMsg"></div>
+    <button class="btn" id="fetchBtn">📥 Fetch job from this page</button>
+    <button class="btn ghost" id="manualBtn">✎ Add manually</button>
+    <div style="height:8px;"></div>
+    <button class="btn ghost" id="autofillBtn">⚡ Autofill this application</button>
+  </div>
+
+  <!-- REVIEW / EDIT VIEW (shared by "fetch" and "manual") -->
+  <div class="body" id="reviewView" style="display:none;">
+    <div class="hint" id="reviewHint">Review and edit before saving to your pipeline.</div>
+    <div class="msg" id="reviewMsg"></div>
+    <div class="field"><label>Company *</label><input id="r_company" /></div>
+    <div class="field"><label>Role / Title *</label><input id="r_title" /></div>
+    <div class="field"><label>Location</label><input id="r_location" /></div>
+    <div class="field"><label>Pay / Salary</label><input id="r_salary" placeholder="e.g. $100k-120k" /></div>
+    <div class="field"><label>Job URL</label><input id="r_url" /></div>
+    <button class="btn" id="saveReviewBtn">Save to Pipeline</button>
+    <button class="btn ghost" id="cancelReviewBtn">Cancel</button>
+  </div>
+
+  <div class="footer">
+    <span id="userEmail" style="color:var(--text-dim);"></span>
+    <a href="#" id="signOutLink">Sign out</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
