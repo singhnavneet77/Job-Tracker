@@ -183,7 +183,6 @@ Create a branch, open a PR, and include a short testing guide in your PR descrip
 
 ## License
 
-No license file is included by default. If you plan to share or publish, add a LICENSE (for example, MIT) to clarify reuse terms.
 
 ---
 
