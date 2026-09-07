@@ -179,14 +179,3 @@ Contributions are welcome. Suggested improvements:
 
 Create a branch, open a PR, and include a short testing guide in your PR description.
 
----
-
-## License
-
-
----
-
-If you want, I can also:
-- Add this README.md to the repository (I have just updated it).
-- Add a CONTRIBUTING.md and .env.example for the backend.
-- Create a small troubleshooting doc with screenshots showing how to load the extension and inspect logs.
